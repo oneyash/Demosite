@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Webapp</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'article/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'article/css/style_temp.css' %}" />
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="left_div">
+                {% include 'article/left_sidebar.html' %}
+                <div class="clearfix"></div>
+            </div>
+            <div class="right_div">
+                <h2>Top {{length}} Articles</h2>
+                <div class="random_article">
+                    {% if random_article %}
+
+                        <div class="title">
+                                <h4><a href="{% url 'article:detail' random_article.id %}">{{ random_article.title}}</a></h4>
+                                <span> {{ random_article.publication_date }} | </span><span id="author">{{ random_article.author }}</span>
+
+                        </div>
+                        <div class="preview_img">
+                            <img src="/static/article/img/{{random_article.image}}" alt="">
+                        </div>
+                        <p>{{ random_article.bodytext|truncatewords:70 }}</p>
+
+                    {% endif %}
+                </div>
+                <div class="article_list">
+                    {% if article_list %}
+
+                    {% for article in article_list %}
+                        <div class="list">
+                            <div class="serial_no">
+                                <span>{{ forloop.counter }}</span>
+                            </div>
+                            <div class="list-content">
+                                <div class="title">
+                                    <h4><a href="{% url 'article:detail' article.id %}">{{ article.title}}</a></h4>
+                                </div>
+                                <p>{{article.bodytext|truncatewords:40}}</p>
+                                <h5><a id="read_more" href="{% url 'article:detail' article.id %}">Read More</a></h5>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% else %}
+                    <p>No articles are available.</p>
+                    {% endif %}
+                </div>
+                <div class="bottom_list">
+                    {% include 'article/bottom_nav_list.html' %}
+
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

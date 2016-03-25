@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <div class="left_content">
+            <div class="left_main_img">
+                <a href="{% url 'article:index' %}">Home</a>
+            </div>
+
+            <div class="icon_img">
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <span class="glyphicon glyphicon-search"></span>
+            </div>
+            <hr style="margin-top: 0px; margin-bottom: 20px;">
+
+            <div class="thumb_list">
+                {% for article in article_list|slice:":4" %}
+                    <div class="thumbs">
+
+                        <a href="{% url 'article:detail' article.id %}" title="img1"> <img src="/static/article/img/{{article.image_small}}" alt="" /><p>Article {{ forloop.counter }}</p></a>
+                    <div class="clearfix"></div>
+                    </div>
+                {% endfor %}
+                <div class="clearfix"></div>
+            </div>
+        </div>
+</body>
+</html>

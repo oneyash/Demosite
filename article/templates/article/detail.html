@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Webapp</title>
+
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'article/js/jquery-1.9.0.min.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'article/js/easing.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'article/css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'article/css/style_temp.css' %}" />
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="content">
+
+            <div class="left_div">
+                {% include 'article/left_sidebar.html' %}
+                <div class="clearfix"></div>
+            </div>
+            <div class="right_div">
+
+                <div class="main_article">
+                    {% if article %}
+
+                        <div class="title">
+                                <h2>{{ article.title}}</h2>
+                                <span> {{ article.publication_date }} | </span><span id="author">{{ article.author }}</span>
+
+                        </div>
+                        <div class="preview_img">
+                            <img src="/static/article/img/{{article.image}}" alt="">
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="main_body">
+                            <div class="body_content">
+                               <p>{{ article.bodytext }}</p>
+                            </div>
+                            <div class="body_img">
+                                <div class="preview_img">
+                                    <img src="/static/article/img/{{article.image_small}}" alt="">
+                                    <div class="clearfix"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    {% endif %}
+                </div>
+                <div class="bottom_list">
+                    {% include 'article/bottom_nav_list.html' %}
+                </div>
+            </div>
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
