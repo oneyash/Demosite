@@ -1,3 +1,5 @@
+
+# -*- coding: utf-8 -*-
 import os, sys
 currentFileFolder = os.path.realpath(os.path.dirname(__file__))
 edmarketRoot = os.path.realpath(os.path.join(currentFileFolder, '..'))
@@ -58,7 +60,7 @@ body_text = "The Immortals of Meluha is the first novel of the Shiva trilogy ser
 " were once human beings; it was their deeds in the human life that made them famous as Gods. After finishing writing The " \
 "Immortals of Meluha, Tripathi faced rejection from many publication houses. Ultimately when his agent decided to publish " \
 "the book himself, Tripathi embarked on a promotional campaign. It included posting a live-action video on YouTube, and " \
-"making the first chapter of the book available as a free digital download, to entice readers."
+"making the first chapter of the book available as a free digital download, to entice readers."\
 "Ultimately, when the book was published in February 2010, it went on to become a huge commercial success. It had to be " \
 "reprinted a number of times to keep up with the demand. Tripathi even changed his publisher and hosted a big launch for " \
 "the book in Delhi. It was critically appreciated by some Indian reviewers, others noted that Tripathi's writing tended " \
@@ -96,7 +98,7 @@ body_text = "This article is about the series of seven novels. For its eponym, s
 "Harry Potter is a series of seven fantasy novels written by British author J. K. Rowling. The novels chronicle the life" \
 " of a young wizard, Harry Potter, and his friends Hermione Granger and Ron Weasley, all of whom are students at Hogwarts " \
 "School of Witchcraft and Wizardry. The main story arc concerns Harry's struggle against Lord Voldemort, the Dark wizard who " \
-"intends to become immortal, overthrow the Ministry of Magic, subjugate non-magic people and destroy anyone who stands in his way."
+"intends to become immortal, overthrow the Ministry of Magic, subjugate non-magic people and destroy anyone who stands in his way."\
 
 "Since the release of the first novel, Harry Potter and the Philosopher's Stone, on 30 June 1997, the books have gained " \
 "immense popularity, critical acclaim and commercial success worldwide. They attracted a wide adult audience, and have " \
@@ -105,10 +107,10 @@ body_text = "This article is about the series of seven novels. For its eponym, s
 "violence depicted in the series. As of July 2013, the books have sold more than 450 million copies worldwide, making the" \
 " series the best-selling book series in history, and have been translated into seventy three languages.[4][5] The last " \
 "four books consecutively set records as the fastest-selling books in history, with the final instalment selling roughly " \
-"eleven million copies in the United States within twenty four hours of its release."
+"eleven million copies in the United States within twenty four hours of its release."\
 "A series of many genres, including fantasy, drama, coming of age and the British school story (which includes elements " \
 "of mystery, thriller, adventure, horror and romance), it has many cultural meanings and references.[6] According to Rowling," \
-" the main theme is death.[7] There are also many other themes in the series, such as prejudice, corruption, and madness."
+" the main theme is death.[7] There are also many other themes in the series, such as prejudice, corruption, and madness."\
 
 "The series was originally published in English by two major publishers, Bloomsbury in the United Kingdom and Scholastic" \
 " Press in the United States. The play Harry Potter and the Cursed Child will open in London on 30 July 2016 at the Palace " \
@@ -133,12 +135,11 @@ body_text = "The Kite Runner is the first novel by Afghan-American author Khaled
             "it tells the story of Amir, a young boy from the Wazir Akbar Khan district of Kabul, whose closest friend is Hassan, " \
             "his father's young Hazara servant. The story is set against a backdrop of tumultuous events, from the fall of " \
             "Afghanistan's monarchy through the Soviet military intervention, the exodus of refugees to Pakistan and the United States, " \
-            "and the rise of the Taliban regime."
-
-"Hosseini has commented that he considers The Kite Runner to be a father–son story, emphasizing the familial aspects of " \
+            "and the rise of the Taliban regime.Hosseini has commented that he considers The Kite Runner to be a father–son story, " \
+            "emphasizing the familial aspects of " \
 "the narrative, an element that he continued to use in his later works. Themes of guilt and redemption feature prominently " \
 "in the novel,[3] with a pivotal scene depicting an act of violence against Hassan that Amir fails to prevent. " \
-"The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son over two decades later."
+"The latter half of the book centers on Amir's attempts to atone for this transgression by rescuing Hassan's son over two decades later."\
 
 "The Kite Runner became a bestseller after being printed in paperback and was popularized in book clubs. It was a number " \
 "one New York Times bestseller for over two years,[4] with over seven million copies sold in the United States.[5] Reviews " \
@@ -157,7 +158,7 @@ image = "sherlock.jpg"
 image_small = "sherlock_small.jpg"
 publication_date = "1887-08-27"
 
-body_text = "Sherlock Holmes (/ˈʃɜːrlɒk ˈhoʊmz/) is a fictional private detective created by British author Sir Arthur " \
+body_text = "Sherlock Holmes is a fictional private detective created by British author Sir Arthur " \
             "Conan Doyle. Known as a consulting detective in the stories, Holmes is known for a proficiency with observation, " \
                                                           "forensic science, and logical reasoning that borders on the fantastic, " \
             "which he employs when investigating cases for a wide variety of clients, including Scotland Yard. First appearing " \
@@ -167,8 +168,7 @@ body_text = "Sherlock Holmes (/ˈʃɜːrlɒk ˈhoʊmz/) is a fictional private d
                                                  " Victorian or Edwardian periods, taking place between about 1880 to 1914. " \
                                                  "Most are narrated by the character of Holmes's friend and biographer " \
                                                  "Dr. Watson, who usually accompanies Holmes during his investigations and " \
-        "often shares quarters with him at the address of 221B Baker Street, London, where many of the stories begin."
-
+        "often shares quarters with him at the address of 221B Baker Street, London, where many of the stories begin."\
 "Though not the first fictional detective, Sherlock Holmes is arguably the most well-known, with Guinness World Records " \
 "listing him as the most portrayed movie characterin history.[1] Holmes's popularity and fame are such that many have " \
                                                    "believed him to be not a fictional character but a real individual;[2][3][4] " \
